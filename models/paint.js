@@ -11,6 +11,9 @@ Paint.prototype.isEmpty = function() {
     }
 }
 
+Paint.prototype.empty = function() {
+    return this.amount = 0;
+}
 
 
 module.exports = Paint;

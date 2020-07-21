@@ -19,4 +19,10 @@ describe('Paint', function () {
         assert.strictEqual(actual, false);
     });
 
+    it('should be able to empty itself of paint', function () {
+        paint.empty();
+        const actual = paint.isEmpty();
+        assert.strictEqual(actual, true);
+    })
+
 });
