@@ -22,7 +22,7 @@ describe('room', function() {
     it('should be able to be painted', function() {
         room.getPainted()
         const actual = room.painted;
-        assert.strictEqual(actual, 1);
+        assert.strictEqual(actual, 30);
 
     });
 
