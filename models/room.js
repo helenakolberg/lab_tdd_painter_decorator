@@ -3,7 +3,9 @@ const Room = function(area) {
     this.painted = 0;
 };
 
-
+Room.prototype.getPainted = function () {
+    return this.painted++;
+}
 
 
 

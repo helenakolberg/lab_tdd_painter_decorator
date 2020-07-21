@@ -17,6 +17,13 @@ describe('room', function() {
     it('should start not painted', function() {
         const actual = room.painted;
         assert.strictEqual(actual, 0);
-    })
+    });
+
+    it('should be able to be painted', function() {
+        room.getPainted()
+        const actual = room.painted;
+        assert.strictEqual(actual, 1);
+
+    });
 
 });
