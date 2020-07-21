@@ -22,4 +22,11 @@ describe('decorator', function() {
         const actual = decorator.numberOfPaints();
         assert.strictEqual(actual, 1);
     })
+
+    it('should be able to calculate how much total paint it has in stock', function () {
+        decorator.addPaint(paint);
+        decorator.addPaint(paint);
+        const actual = decorator.numberOfLitres();
+        assert.strictEqual(actual, 14);
+    })
 });

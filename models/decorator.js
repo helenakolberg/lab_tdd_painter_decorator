@@ -10,4 +10,12 @@ Decorator.prototype.addPaint = function (paint) {
     return this.stock.push(paint)
 }
 
+Decorator.prototype.numberOfLitres = function() {
+    let total = 0;
+    for (paint of this.stock) {
+        total += paint.amount
+    }
+    return total;
+}
+
 module.exports = Decorator;

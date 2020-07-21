@@ -24,5 +24,6 @@ describe('Paint', function () {
         const actual = paint.isEmpty();
         assert.strictEqual(actual, true);
     })
+    
 
 });
