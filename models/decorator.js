@@ -18,4 +18,8 @@ Decorator.prototype.numberOfLitres = function() {
     return total;
 }
 
+Decorator.prototype.isEnoughPaint = function(room) {
+    return (this.numberOfLitres() >= room.area)
+}
+
 module.exports = Decorator;
