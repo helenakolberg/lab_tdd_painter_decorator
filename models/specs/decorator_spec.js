@@ -8,11 +8,13 @@ describe('decorator', function() {
     let decorator;
     let paint;
     let room;
+    let room2;
 
     beforeEach(function(){
         decorator = new Decorator();
         paint = new Paint(7);
         room = new Room(30);
+        room2 = new Room(10);
     })
 
     it('should start with empty stock', function(){
@@ -38,5 +40,14 @@ describe('decorator', function() {
         decorator.addPaint(paint);
         const actual = decorator.isEnoughPaint(room);
         assert.strictEqual(actual, false);
+    })
+
+    it('should be able to paint room if enough paint', function() {
+        decorator.addPaint(paint);
+        decorator.addPaint(paint);
+        const actual = decorator.paintRoom(room2);
+        const actualRoom = room2.painted;
+        assert.strictEqual(actual, true);
+        assert.strictEqual(actualRoom, 10);
     })
 });

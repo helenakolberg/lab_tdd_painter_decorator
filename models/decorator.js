@@ -22,4 +22,13 @@ Decorator.prototype.isEnoughPaint = function(room) {
     return (this.numberOfLitres() >= room.area)
 }
 
+Decorator.prototype.paintRoom = function(room) {
+    if (this.isEnoughPaint(room)) {
+    room.getPainted();
+        return true
+    } else {
+        return false
+    }
+};
+
 module.exports = Decorator;
