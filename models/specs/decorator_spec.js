@@ -50,4 +50,12 @@ describe('decorator', function() {
         assert.strictEqual(actual, true);
         assert.strictEqual(actualRoom, 10);
     })
+
+    it('should be able to decrease the number of litres in stock by the number of room area squaremetres', function () {
+        decorator.addPaint(paint);
+        decorator.addPaint(paint);
+        decorator.removePaint(room2);
+        const actual = decorator.numberOfLitres();
+        assert.strictEqual(actual, 4);
+    })
 });
